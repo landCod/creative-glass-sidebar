@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: url(../bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Roboto", sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 88px;
+    transition: .8s ease;
+    background: rgba(10, 10, 10, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 0 12px 12px 0;
+    padding: 24px 8px;
+    position: relative;
+}
+
+.sidebar .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar .logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.sidebar .logo h2 {
+    color: #FFFFFF;
+    display: inline;
+    max-width: 0;
+    overflow: hidden;
+    transition: .8s ease;
+}
+
+
+.sidebar .logo span {
+    font-family: cursive;
+    font-size: 26px;
+    display: inline;
+}
+
+.sidebar p {
+    transition: .4s ease-in-out;
+    max-width: 0;
+    overflow: hidden;
+}
+
+/* Hover Mode */
+
+.sidebar:hover {
+    width: 240px;
+}
+
+.sidebar:hover p,
+.sidebar.active p {
+    max-width: 100%;
+}
+
+.sidebar:hover .logo h2,
+.sidebar.active .logo h2 {
+    max-width: 100%;
+}
+
+/* End Of Hover Mode */
+
+/* Active Sidebar */
+
+.sidebar.active {
+    width: 240px;
+}
+
+/* End of Active Sidebar */
+
+/* End Sidebar */
+
+/* List */
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 56px 12px 0;
+}
+
+.sidebar ul li {
+    transition: .4s ease-in-out;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.sidebar ul li p {
+    color: #FFFFFF;
+}
+
+.sidebar ul li:hover {
+    background: rgb(206, 206, 206, 0.4);
+}
+
+.sidebar ul li.active {
+    background: #FFFFFF;
+}
+
+.sidebar ul li.active p {
+    color: #000000;
+}
+
+.sidebar ul li.active i {
+    color: #000000 !important;
+}
+
+/* End of List */
+
+/* Button */
+
+.sidebar button {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #FFFFFF;
+    position: absolute;
+    right: -11px;
+    top: 100px;
+    z-index: 10;
+    transition: 0.3s all ease-in;
+}
+
+.sidebar.active button {
+    rotate: 180deg;
+}
+
+/* End of Button */
